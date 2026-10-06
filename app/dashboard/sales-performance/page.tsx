@@ -2,7 +2,7 @@
 
 import { useState, type ReactNode } from 'react';
 import Link from 'next/link';
-import { Building2, ChartNoAxesCombined, ChevronRight, LogOut } from 'lucide-react';
+import { Building2, ChartNoAxesCombined, ChevronRight, LogOut, ClipboardList } from 'lucide-react';
 import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
 type DashboardShellProps = {
@@ -14,6 +14,7 @@ type DashboardShellProps = {
 const navigation = [
   { href: '/dashboard', label: 'Dashboard', key: 'dashboard', icon: Building2 },
   { href: '/dashboard/sales-performance', label: 'Sales Performance', key: 'sales-performance', icon: ChartNoAxesCombined },
+  { href: '/dashboard/issue', label: 'Issue Board', key: 'issue-board', icon: ClipboardList },
 ];
 
 function DashboardShell({ activePage, headerActions, children }: DashboardShellProps) {

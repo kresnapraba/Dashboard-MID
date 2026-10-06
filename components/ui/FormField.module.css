@@ -1,0 +1,9 @@
+.field { width: 100%; min-width: 0; color: #263249; font-family: inherit; color-scheme: light; }
+.label { display: block; margin-bottom: 7px; font-size: 12px; font-weight: 600; }
+.control { width: 100%; min-height: 36px; padding: 8px 12px; border: 1px solid #dfe5ff; border-radius: 7px; background: #f1f3ff; color: #263249; font: inherit; font-size: 12px; line-height: 18px; }
+.control::placeholder { color: #8290ae; }
+.control:focus-visible { outline: 2px solid #7e54e8; outline-offset: 2px; }
+.control[aria-invalid="true"] { border-color: #e49aa4; background: #fff5f6; }
+.control:disabled { background: #f0f1f5; color: #8992a4; cursor: not-allowed; }
+.error { margin-top: 6px; color: #d63b49; font-size: 12px; }
+@media (max-width: 600px) { .control { font-size: 16px; min-height: 44px; } }

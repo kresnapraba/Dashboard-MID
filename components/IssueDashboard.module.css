@@ -1,0 +1,77 @@
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 4.1% 32px;
+  background: #f7f8fc;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.summarySection { margin-bottom: 28px; }
+.summaryTitle { margin: 0 0 14px; color: #1c273a; font-size: 18px; font-weight: 700; }
+.summaryGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); gap: 14px; }
+.statusCard { min-height: 104px; padding: 16px 18px; border: 1px solid #e8ebf1; border-left: 4px solid #3972ef; border-radius: 10px; background: #fff; box-shadow: 0 2px 8px rgb(31 45 61 / 4%); }
+.statusCard:nth-child(2) { border-left-color: #a87300; }
+.statusCard:nth-child(3) { border-left-color: #8b5cf6; }
+.statusCard:nth-child(4) { border-left-color: #168653; }
+.statusCard:nth-child(5) { border-left-color: #64748b; }
+.statusCard h3 { margin: 0; overflow: hidden; color: #647087; font-size: 12px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; text-transform: capitalize; }
+.statusCard p { margin: 8px 0 1px; color: #1c273a; font-size: 24px; font-weight: 700; line-height: 1; }
+.statusCard span { color: #8b98b2; font-size: 11px; }
+.tableSection { margin: auto 0; padding: 0 0 0; }
+.issueTable { border: 0 !important; border-collapse: separate !important; border-spacing: 0 0 !important; table-layout: fixed; font-size: 11px !important; }
+.issueTable th { height: 36px; padding: 9px 12px !important; background: #f2f3fc !important; color: #4c5e80 !important; font-size: 10px !important; letter-spacing: .055em !important; text-align: left !important; }
+.issueTable th:first-child { border-left: 1px solid #f2f3fc; }
+.issueTable td { height: 56px; padding: 10px 12px !important; border-top: 1px solid #e8ebf1 !important; border-bottom: 1px solid #e8ebf1 !important; background: #f7f8fc !important; }
+.issueTable th:first-child, .issueTable td:first-child { width: 15%; border-left: 2px solid #e6e9ef; text-align: center !important; font-weight: 400 !important; }
+.issueTable th:last-child, .issueTable td:last-child { text-align: center !important; }
+.issueTable th:nth-child(2), .issueTable td:nth-child(2) { width: 19%; }
+.issueTable th:nth-child(3), .issueTable td:nth-child(3) { width: 23%; }
+.issueTable th:nth-child(4), .issueTable td:nth-child(4) { width: 13%; }
+.issueTable th:nth-child(5), .issueTable td:nth-child(5) { width: 15%; white-space: nowrap; }
+.issueTable th:nth-child(6), .issueTable td:nth-child(6) { width: 15%; text-align: center; }
+.issueTable tbody tr:last-child td { border-bottom: 0 !important; }
+.issueTable tbody tr:last-child td:first-child { border-radius: 0 0 0 0; }
+.issueTable tbody tr[tabindex="0"] { cursor: pointer; }
+.issueTable tbody tr[tabindex="0"]:hover td { background: #f0efff !important; }
+.issueTable tbody tr[tabindex="0"]:focus-visible { outline: 2px solid #7c3aed; outline-offset: -2px; }
+.issueId { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.department { display: block; overflow: hidden; color: #1c273a; font-size: 12px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+.issueText { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.person { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.avatar { display: inline-flex; width: 21px; height: 21px; align-items: center; justify-content: center; border-radius: 50%; background: #c5d6de; color: #34475a; font-size: 9px; font-weight: 700; }
+.date { white-space: nowrap; }
+.statusBadge { padding: 3px 9px !important; font-size: 11px !important; }
+.pagination { justify-content: center; gap: 4px !important; }
+.pagination button { min-width: 28px; height: 28px; }
+.pagination button[aria-current="page"] { min-width: 28px; }
+.detailDialog { position: fixed; inset: 50% auto auto 50%; margin: 0; transform: translate(-50%, -50%); width: min(478px, calc(100vw - 28px)); max-width: none; max-height: min(690px, calc(100dvh - 28px)); padding: 0; overflow: auto; border: 0; border-top: 5px solid #7c3aed; border-radius: 16px; background: #fff; color: #20202c; box-shadow: 0 24px 70px rgb(0 0 0 / 28%); }
+.detailDialog::backdrop { background: rgb(0 0 0 / 72%); }
+.detailHeader { display: flex; min-height: 76px; align-items: center; justify-content: space-between; padding: 0 26px; border-bottom: 1px solid #ececf0; }
+.detailHeader h2 { margin: 0; font-size: 18px; font-weight: 700; }
+.detailClose { width: 32px; height: 32px; border: 0; background: transparent; color: #92929b; font-size: 25px; line-height: 1; cursor: pointer; }
+.detailBody { padding: 12px 32px 0; }
+.detailField { display: flex; min-height: 80px; flex-direction: column; justify-content: center; gap: 6px; border-bottom: 1px solid #ededf0; }
+.detailField span, .detailStatus > span { color: #92929b; font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.detailField strong { color: #20202c; font-size: 14px; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
+.detailStatus { display: flex; min-height: 82px; flex-direction: column; align-items: flex-start; justify-content: center; gap: 10px; }
+.detailStatus .statusBadge { padding: 6px 12px !important; }
+.detailFooter { padding: 8px 32px 30px; }
+.detailDone { width: 100%; min-height: 44px; border: 0; border-radius: 8px; background: #7c3aed; color: #fff; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+.detailDone:hover { background: #6d28d9; }
+.detailDone:focus-visible, .detailClose:focus-visible { outline: 2px solid #7c3aed; outline-offset: 3px; }
+
+@media (min-width: 1100px) {
+  .dashboard { padding-left: 4.1%; padding-right: 4.1%; }
+  .tableSection { max-width: 100%; }
+}
+
+@media (max-width: 700px) {
+  .dashboard { padding: 20px 16px 24px; }
+  .summaryGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .statusCard { padding: 14px; }
+  .tableSection { margin: 24px -16px auto; padding: 0 16px; }
+  .issueTable { min-width: 740px; }
+  .pagination { margin-top: 24px; }
+}
